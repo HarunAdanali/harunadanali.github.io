@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> burası önemli --> 
+    <title>Ders 3 Beyler Bayanlar</title>
+    <style>
+        .kutu {
+            border-radius: unset;
+            background-color: unset;
+            color: unset;
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 12pt;
+        }
+
+        * {
+            font-size: 12pt;
+        }
+
+        code {
+            font-size: 1, 9vw;
+            font-style: italic;
+        }
+
+        pre {
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            overflow-x: auto;
+        }
+
+        div {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Listeler</h2>
+        HTML'da üç tür liste vardır.
+        <ol>
+            <li>Sıralı Listeler</li>
+            <li>Sırasız Listeler</li>
+            <li>Tanımlama Listeleri</li>
+        </ol>
+        <h3>Sıralı Listeler <code>&lt;ol&gt;&lt;/ol&gt;</code> (Ordered List)</h3>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;İlk bahar&lt;/li&gt;
+    &lt;li&gt;Kış&lt;/li&gt;
+    &lt;li&gt;Sonbahar&lt;/li&gt;
+    &lt;li&gt;Yaz&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <a href="ornek/d3o1.html">Bak Böyle</a>
+        <br> <br>
+        &lt;ol&gt; etiketinde type ve start parametleri kullanılabilir
+        <pre><code>&lt;ol type="I" start="2"&gt;
+    &lt;li&gt;madde&lt;/li&gt;
+    &lt;li&gt;zararsız madde&lt;/li&gt;
+    &lt;li&gt;bağımlılık yapmayan&lt;/li&gt;
+    &lt;li&gt;su gibi&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        Type için a,A,i,I,1 değerleri kullanılabilir <br>
+        Start için kaçıncı maddeden başlamak istiyorsanız o değerden başlayabilirsiniz <br><br>
+        Ayrıca type maddeler içinde de tanımlanabilir.
+        <pre><code>&lt;ol&gt;
+    &lt;li type="A"&gt;madde 1&lt;/li&gt;
+    &lt;li type="a"&gt;madde 2&lt;/li&gt;
+    &lt;li type="I"&gt;madde 3&lt;/li&gt;
+    &lt;li type="i"&gt;madde 4&lt;/li&gt;
+    &lt;li type="1"&gt;madde 5&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <a href="ornek/d3o3.html">baak</a>
+        <h3>Sırasız Listeler <code>&lt;ul&gt;&lt;/ul&gt;</code> (Unordered List) </h3>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Çay&lt;/li&gt;
+    &lt;li&gt;Kahve&lt;/li&gt;
+    &lt;li&gt;Meyve Suyu&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        bu etiketde de type (disc,circle,square) değerlerini alınabilir.
+        <pre><code>&lt;ul&gt;
+    &lt;li type="disc"&gt;elma&lt;/li&gt;
+    &lt;li type="circle"&gt;armut&lt;/li&gt;
+    &lt;li type="square"&gt;kel mahmut&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <a href="ornek/d3o5.html">Örnek</a> <br><br>
+        Liste madddelerini linklerle de oluşturabiliriz.
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://www.firat.edu.tr/tr"&gt;Fırat&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://www.metu.edu.tr/tr"&gt;ODTÜ&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://itu.edu.tr/"&gt;İTÜ&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://sbe.yildiz.edu.tr/"&gt;YTÜ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <a href="ornek/d3o6.html">Aha burda</a><br><br>
+        Liste İçinde Liste
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Kahve&lt;/li&gt;
+    &lt;ul type="disk"&gt;
+        &lt;li&gt;Sade&lt;/li&gt;
+        &lt;li&gt;Orta&lt;/li&gt;
+        &lt;li&gt;Şekerli&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;li&gt;Çay&lt;/li&gt;
+    &lt;ul type="disk"&gt;
+        &lt;li&gt;Açık&lt;/li&gt;
+        &lt;li&gt;Koyu&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ol&gt;</code></pre>
+        <a href="ornek/d3o7.html">Bu da burda </a><br><br><br>
+        <h1>CSS (cascading Style Sheets)</h1>
+        <h2>CSS Yapısı</h2>
+        <pre><code>Selektör{ özellik : değer ;
+          özellik : değer ;
+          özellik : değer ;
+        }</code></pre>
+        Örnek
+        <pre><code>p{color:red;
+    font-family:arial;
+    font-size:12pt;}</code></pre>
+        <h3>Css Ekleme Bİçimleri</h3>
+        <ol>
+            <li>Sayfa içi Tanım</li>
+            <li>Satır içi Tanım</li>
+            <li>Harici Bi Stil Dosyası İle Tanım</li>
+        </ol>
+        <h4>Sayfa içi Tanım</h4>
+        <p>
+            head bloğunda <code>&lt;style&gt;&lt;/style&gt;</code> etiketleri arasında tanımlanır.
+        <pre><code>&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt; CSS işte Çok DA Abarmamak Lazım &lt;/title&gt;
+    &lt;style&gt;
+        p {color: blue;font-family: verdana;font-size: 10pt;}
+
+        h1 {color: rgb(25, 210, 0);}
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Bu başlık yeşil ne kadar gıcık bi rek ya&lt;/h1&gt;
+    &lt;p&gt;bu yazı mavi verdana ne 10 punto&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+        </p>
+        <a href="ornek/d3o8.html">bu kadar</a>
+        <h4>Satır İçi Tanım</h4>
+        <p>Satı içerisinde style parametresiyle tanımlanır. <br>
+        <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;  &lt;/title&gt;
+        &lt;style&gt;
+            p{color: red;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 style="color: green; border: 5px solid blue;"&gt;Burası başlık&lt;/h1&gt;
+        &lt;p style="color: orange;font-weight: bold;"&gt;burası verdana,turuncu ve bold&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <a href="ornek/d3o9.html"><button style="width: 100px;height: 20px;">deneme </button></a>
+        </p>
+        <h4>Harici Css Dosyası İle Tanım</h4>
+        *.css uzantılı dosyada css tanımları yapılır. <br>
+        css dosyası her sayfaya bağlanır. <br><br>
+
+        style.css
+
+
+        <pre class="kutu"><code>p{
+    color: blue;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+ }
+   
+h1,h3{
+    color: #0a7a0b;
+    font-style: italic;
+ }</code></pre><br>
+        <a href="ornek/d3o10.html">d3o10.html</a>
+        <pre class="kutu"><code>&lt;html&gt;
+    &lt;head&gt;                                                
+        &lt;title&gt; Css Çekme &lt;/title&gt;                  //web sitesinde bi üst klasörde  
+        &lt;link rel="stylesheet" href="../style.css"&gt; //olduğu için style.css dosyası 
+    &lt;/head&gt;                                         //"../" kullanıldık.   
+    &lt;body&gt;                                            
+        &lt;h3&gt;Burası 3 nolu başlık; yeşil,italic&lt;/h3&gt;
+        &lt;p&gt;mavi, arial, 10 punto ve kalın&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <a href="ornek/d3o11.html">d3o11.html</a>
+        <pre class="kutu"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;  &lt;/title&gt;
+        &lt;link rel="stylesheet" href="../style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Buraya da cssi çektik ama kullanmadık zevkine :)
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><br>
+        <h2>CSS Tanımlamada temel selektör yapıları</h2>
+        <table>
+            <tr style="font-weight: bold;">
+                <td>Selektör</td>
+                <td>Örnek</td>
+                <td>Etki Alanı</td>
+            </tr>
+            <tr>
+                <td>Element</td>
+                <td>a{özellik}</td>
+                <td>Tüm a etiketleri</td>
+            </tr>
+            <tr>
+                <td style="padding-right:20px ;">Element,Element</td>
+                <td style="padding-right:20px ;">p,div{özellik}</td>
+                <td>Tüm paragraf ve div etiketleri</td>
+            </tr>
+            <tr>
+                <td>.class</td>
+                <td>.kutu{özellik}</td>
+                <td>class="kutu" olarak tanımlanan heryer</td>
+            </tr>
+            <tr>
+                <td>#id</td>
+                <td>#renk{özellik}</td>
+                <td>id="renk"şeklinde tanımlanan her yer</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>*{özellik}</td>
+                <td>Tüm etiketler</td>
+            </tr>
+        </table><br><br>
+        <a href="ornek/d3o12.html">d3012.html</a>
+        <pre class="kutu"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;  &lt;/title&gt;
+        &lt;style&gt;
+            h3,h1{color: #ff0000;}
+            h1.kutu1{border:10px solid red;}
+            h1.kutu2{border:15px solid rgb(15,250  ,0) ;}
+            #yazıtipi1{text-align: center;color: orange;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p id="yazıtipi1"&gt;Burası turuncu ve ortalı&lt;/p&gt;
+        &lt;h3&gt;Kırmızı başlık&lt;/h3&gt;
+        &lt;h1 class="kutu1"&gt;kırmızı çerçeve&lt;/h1&gt;
+        &lt;h1 class="kutu2"&gt;yeşil çerçeveli başlık&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><br>
+        <h1>HTML Formları</h1>
+        <pre class="kutu"><code>&lt;form name="form1" action="form bilgilerinin gönerileceği yer" method="post/get"&gt;
+    Form elemanları, metin kutusu, buton, radyo butonu, check box...
+&lt;/form&gt;</code></pre>
+        <a href="ornek/d3o13.html">Örnek</a>
+        <pre class="kutu"><code>&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt; &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="f1" action="giris.php" method="post"&gt;
+        Kullnıcı adı &lt;input type="text" value="" name="kullanıcı"&gt;&lt;br&gt;
+        Şifre&lt;input type="password" value="" name="sifre"&gt;&lt;br&gt;
+        &lt;input type="submit" value="giris" name="giris"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        Bu formdan aldığımız verileri giris.phpye gönderiyoruz login sayfası olduğu görülüyor zaten php ile kontrol
+        ettircez
+
+        <a href="aaaa"><p style="color: red;font-weight:bold ;" >HASTASINA</p></a>
+
+
+    </div>
+</body>
+
+</html>

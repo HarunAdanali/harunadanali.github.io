@@ -1,0 +1,12 @@
+p {
+    color: blue;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+h1,
+h3 {
+    color: #0a7a0b;
+    font-style: italic;
+}
