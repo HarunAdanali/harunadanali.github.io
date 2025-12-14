@@ -1,12 +1,21 @@
-p {
-    color: blue;
-    font-family: Arial;
-    font-size: 10pt;
-    font-weight: bold;
+pre {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    overflow-x: auto;
+    width: 600px;
+    
 }
 
-h1,
-h3 {
-    color: #0a7a0b;
-    font-style: italic;
+.kutu {
+    border-radius: unset;
+    background-color: unset;
+    color: unset;
+    border: 2px solid black;
+    padding: 20px;
+    padding-right: unset;
+    font-size: 12pt;
+    width: 600px;
 }

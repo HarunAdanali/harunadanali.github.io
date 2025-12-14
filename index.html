@@ -18,7 +18,8 @@
     <a href="sayfa1.html" style="font-size: 40px;">Sayfa 1</a><br>
     <a href="ders/ders1.html" style="font-size: 40px;">ders1</a><br>
     <a href="ders/ders2.html" style="font-size: 40px;">ders2</a><br>
-    <a href="ders/ders3.html" style="font-size: 40px;">ders3</a>
+    <a href="ders/ders3.html" style="font-size: 40px;">ders3</a><br>
+    <a href="ders/ders4.php" style="font-size: 40px;">ders4</a>
     <h1 style="font-size: 50pt; font-family:Verdana;" align="center">BBG</h1>
     <div style="font-size: 30pt;">
         <p>Algoritma dersinde <strong>C programlama</strong> görüyoruz.<br> C dili <em>derleyici</em> bir dildir.</p>
@@ -83,36 +84,39 @@
             <td>9</td>
         </tr>
     </table>
-    <table border="3" class="Tablo">
-        <tr>
-            <td>Ad</td>
-            <td style="min-width: 250px"><input class="InputBoxs"></td>
-            <td rowspan="3"><img src="./Assets/firatlogo.png"></td>
-        </tr>
-        <tr>
-            <td>Soyad</td>
-            <td><input class="InputBoxs"></td>
-        </tr>
-        <tr>
-            <td>Bölüm</td>
-            <td><input class="InputBoxs"></td>
-        </tr>
-        <tr>
-            <td align="center" colspan="3">Hobiler</td>
-        </tr>
-        <tr style="min-height: 200px;">
-            <td colspan="3"><textarea
-                    style="width: 595px; height: 8    0px; background-color: rgb(30, 30, 30);color: white;font-size: 18pt;resize: none;"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" align="right">
-                <button class="Onayla">Onayla</button>
-            </td>
-        </tr>
-    </table>
+    <form action="islem/cekbabaa.php" method="post">
+        <table border="3" class="Tablo">
+            <tr>
+                <td>Ad</td>
+                <td style="min-width: 250px"><input class="InputBoxs" name="ad"></td>
+                <td rowspan="3"><img src="./Assets/firatlogo.png"></td>
+            </tr>
+            <tr>
+                <td>Soyad</td>
+                <td><input class="InputBoxs" name="soyad"></td>
+            </tr>
+            <tr>
+                <td>Bölüm</td>
+                <td><input class="InputBoxs" name="bolum"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">Hobiler</td>
+            </tr>
+            <tr style="min-height: 200px;">
+                <td colspan="3"><textarea name="hobi"
+                        style="width: 595px; height: 8    0px; background-color: rgb(30, 30, 30);color: white;font-size: 18pt;resize: none;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    <button type="submit" class="Onayla">Onayla</button>
+                </td>
+            </tr>
+        </table>
+    </form>
     <p bg-color style="color: #ff0000; font-size: 30pt; background-color: #00ffff;">Bu site eğlence ve test amaçlı
         açılmıştır</p>
+    <a href="ders/test/">...</a>
 </body>
 <style>
     html {
